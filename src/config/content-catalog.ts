@@ -123,16 +123,6 @@ export const allAssets: PortfolioAsset[] = [
     "ratioClass": "square"
   },
   {
-    "id": "covers-vanguard-prototype-jpg",
-    "title": "Vanguard - Prototype",
-    "category": "covers",
-    "type": "image",
-    "src": "/content/covers/Vanguard%20-%20Prototype.jpg",
-    "width": 2028,
-    "height": 2028,
-    "ratioClass": "square"
-  },
-  {
     "id": "covers-where-we-left-off-wxnter-jpg",
     "title": "Where we left off - Wxnter",
     "category": "covers",
@@ -313,7 +303,7 @@ export const allAssets: PortfolioAsset[] = [
   },
   {
     "id": "graphics-dexelz-jpg",
-    "title": "dexelz",
+    "title": "DEXELZ SNIPPET OVERLAY",
     "category": "graphics",
     "type": "image",
     "src": "/content/graphics/dexelz.jpg",
@@ -392,6 +382,36 @@ export const allAssets: PortfolioAsset[] = [
     "ratioClass": "wide"
   },
   {
+    "id": "graphics-rolling-loud-taylor-malone-jpg",
+    "title": "ROLLING LOUD X TAYLOR MALONE",
+    "category": "graphics",
+    "type": "image",
+    "src": "/content/graphics/rolling-loud-taylor-malone.jpg",
+    "width": 1080,
+    "height": 1350,
+    "ratioClass": "tall"
+  },
+  {
+    "id": "graphics-needorkeep-in-a-year-thumbnail-jpg",
+    "title": "NEEDORKEEP IN A YEAR THUMBNAILS",
+    "category": "graphics",
+    "type": "image",
+    "src": "/content/graphics/needorkeep-in-a-year-thumbnail.jpg",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
+  },
+  {
+    "id": "graphics-hyperpopdaily-2026-summer-smash-recap-thumbnail-jpg",
+    "title": "HYPERPOPDAILY 2026 SUMMER SMASH RECAP THUMBNAIL",
+    "category": "graphics",
+    "type": "image",
+    "src": "/content/graphics/hyperpopdaily-2026-summer-smash-recap-thumbnail.jpg",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
+  },
+  {
     "id": "personal-firstpost-jpg",
     "title": "firstpost",
     "category": "PERSONAL",
@@ -462,6 +482,8 @@ export const featuredAssetIds = [
   "personal-trippy-visuals-mp4",
   "covers-b4-vic-vic-jpg",
   "videos-stage-visuals-for-mp4",
+  "videos-hyperpopdaily-summer-smash-2026-movie-youtube",
+  "graphics-needorkeep-in-a-year-thumbnail-jpg",
   "flyers-dj-skelz-flyer-jpeg",
   "flyers-lade-flyer-jpg",
   "graphics-horror-jpg",
