@@ -30,7 +30,18 @@ function renderAssetTitle(asset: PortfolioAsset, stripParentheticalTitleText: bo
 
   const titleMatch = asset.title.match(/^(.*?)(?:\s*\(([^()]*)\))\s*$/);
   if (!titleMatch) {
-    return asset.title;
+    if (!asset.credit || stripParentheticalTitleText) {
+      return asset.title;
+    }
+
+    return (
+      <>
+        <span>{asset.title}</span>
+        <span className="block text-[length:var(--size-project-meta)] leading-[var(--lh-project-meta)]">
+          {asset.credit}
+        </span>
+      </>
+    );
   }
 
   const mainTitle = titleMatch[1]?.trim();
@@ -51,6 +62,20 @@ function renderAssetTitle(asset: PortfolioAsset, stripParentheticalTitleText: bo
       </span>
     </>
   );
+}
+
+function AssetVisual({ asset, imageClassName }: { asset: PortfolioAsset; imageClassName: string }) {
+  if (asset.type === "video") {
+    return (
+      <video className="absolute inset-0 h-full w-full object-cover" src={asset.src} muted autoPlay loop playsInline preload="metadata" />
+    );
+  }
+
+  if (asset.type === "youtube") {
+    return <img className={`${imageClassName} object-cover`} src={asset.src} alt={asset.title} loading="lazy" />;
+  }
+
+  return <Image className={imageClassName} src={asset.src} alt={asset.title} fill sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, 33vw" />;
 }
 
 export function AssetGrid({
@@ -164,27 +189,7 @@ export function AssetGrid({
                   metaMode === "category" ? "aspect-square" : ratioClassMap[asset.ratioClass]
                 }`}
               >
-                {asset.type === "video" ? (
-                  <video
-                    className="absolute inset-0 h-full w-full object-cover"
-                    src={asset.src}
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                    preload="metadata"
-                  />
-                ) : (
-                  <Image
-                    className={`absolute inset-0 h-full w-full ${
-                      metaMode === "category" && asset.ratioClass === "wide" ? "object-contain" : "object-cover"
-                    }`}
-                    src={asset.src}
-                    alt={asset.title}
-                    fill
-                    sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                )}
+                <AssetVisual asset={asset} imageClassName={`absolute inset-0 h-full w-full ${metaMode === "category" && asset.ratioClass === "wide" ? "object-contain" : "object-cover"}`} />
               </button>
             ) : linkMode === "category-asset" ? (
               <Link
@@ -194,27 +199,7 @@ export function AssetGrid({
                   metaMode === "category" ? "aspect-square" : ratioClassMap[asset.ratioClass]
                 }`}
               >
-                {asset.type === "video" ? (
-                  <video
-                    className="absolute inset-0 h-full w-full object-cover"
-                    src={asset.src}
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                    preload="metadata"
-                  />
-                ) : (
-                  <Image
-                    className={`absolute inset-0 h-full w-full ${
-                      metaMode === "category" && asset.ratioClass === "wide" ? "object-contain" : "object-cover"
-                    }`}
-                    src={asset.src}
-                    alt={asset.title}
-                    fill
-                    sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                )}
+                <AssetVisual asset={asset} imageClassName={`absolute inset-0 h-full w-full ${metaMode === "category" && asset.ratioClass === "wide" ? "object-contain" : "object-cover"}`} />
               </Link>
             ) : (
               <div
@@ -222,27 +207,7 @@ export function AssetGrid({
                   metaMode === "category" ? "aspect-square" : ratioClassMap[asset.ratioClass]
                 }`}
               >
-                {asset.type === "video" ? (
-                  <video
-                    className="absolute inset-0 h-full w-full object-cover"
-                    src={asset.src}
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                    preload="metadata"
-                  />
-                ) : (
-                  <Image
-                    className={`absolute inset-0 h-full w-full ${
-                      metaMode === "category" && asset.ratioClass === "wide" ? "object-contain" : "object-cover"
-                    }`}
-                    src={asset.src}
-                    alt={asset.title}
-                    fill
-                    sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                )}
+                <AssetVisual asset={asset} imageClassName={`absolute inset-0 h-full w-full ${metaMode === "category" && asset.ratioClass === "wide" ? "object-contain" : "object-cover"}`} />
               </div>
             )}
             <p className="mt-[var(--space-xs)] font-[var(--font-display)] text-[length:var(--size-project-name)] leading-[var(--lh-project-name)] font-bold uppercase">
@@ -280,7 +245,15 @@ export function AssetGrid({
             </button>
 
             <div className="asset-preview-media">
-              {activeAsset.type === "video" ? (
+              {activeAsset.type === "youtube" && activeAsset.youtubeId ? (
+                <iframe
+                  className="h-auto w-full max-h-full aspect-video"
+                  src={`https://www.youtube-nocookie.com/embed/${activeAsset.youtubeId}`}
+                  title={activeAsset.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : activeAsset.type === "video" ? (
                 <video
                   className="h-auto w-auto max-h-full max-w-full object-contain"
                   src={activeAsset.src}

@@ -2,8 +2,10 @@ export type PortfolioAsset = {
   id: string;
   title: string;
   category: string;
-  type: "image" | "video";
+  type: "image" | "video" | "youtube";
   src: string;
+  youtubeId?: string;
+  credit?: string;
   width: number;
   height: number;
   ratioClass: "wide" | "tall" | "square";
@@ -145,7 +147,7 @@ export const allAssets: PortfolioAsset[] = [
     "title": "AUTUMN + SAWEB (EDITING, SEQUENCING, COLORING)",
     "category": "VIDEOS",
     "type": "video",
-    "src": "/content/videos/AUTUMN%20%2B%20SAWEB%20%28EDITING%2C%20SEQUENCING%2C%20COLORING%29.mp4",
+    "src": "/content/videos/AUTUMN%20%2B%20SAWEB%20(EDITING%2C%20SEQUENCING%2C%20COLORING).mp4",
     "width": 3000,
     "height": 2160,
     "ratioClass": "wide",
@@ -156,7 +158,7 @@ export const allAssets: PortfolioAsset[] = [
     "title": "Dexelz snippet promotional video(graphics, sequencing, editing)",
     "category": "VIDEOS",
     "type": "video",
-    "src": "/content/videos/Dexelz%20snippet%20promotional%20video%28graphics%2C%20sequencing%2C%20editing%29.mp4",
+    "src": "/content/videos/Dexelz%20snippet%20promotional%20video(graphics%2C%20sequencing%2C%20editing).mp4",
     "width": 3840,
     "height": 2160,
     "ratioClass": "wide",
@@ -166,8 +168,9 @@ export const allAssets: PortfolioAsset[] = [
     "id": "videos-jesus-piece-ixvolt-editing-sequencing-mp4",
     "title": "JESUS PIECE - IXVOLT (editing, sequencing)",
     "category": "VIDEOS",
-    "type": "video",
-    "src": "/content/videos/JESUS%20PIECE%20-%20IXVOLT%20%28editing%2C%20sequencing%29.mp4",
+    "type": "youtube",
+    "src": "https://i.ytimg.com/vi/iFj13qH_ipU/hqdefault.jpg",
+    "youtubeId": "iFj13qH_ipU",
     "width": 1920,
     "height": 1080,
     "ratioClass": "wide",
@@ -188,8 +191,9 @@ export const allAssets: PortfolioAsset[] = [
     "id": "videos-rexv2-no-handz-titles-mp4",
     "title": "REXV2 - NO HANDZ (TITLES)",
     "category": "VIDEOS",
-    "type": "video",
-    "src": "/content/videos/REXV2%20-%20NO%20HANDZ%20%28TITLES%29.mp4",
+    "type": "youtube",
+    "src": "https://i.ytimg.com/vi/BavaR2Dz1Vc/hqdefault.jpg",
+    "youtubeId": "BavaR2Dz1Vc",
     "width": 1920,
     "height": 1080,
     "ratioClass": "wide",
@@ -216,6 +220,66 @@ export const allAssets: PortfolioAsset[] = [
     "height": 720,
     "ratioClass": "wide",
     "durationSeconds": 20.715
+  },
+  {
+    "id": "videos-tezzus-diamond-interview-youtube",
+    "title": "The Tezzus & Diamond* Interview",
+    "category": "VIDEOS",
+    "type": "youtube",
+    "src": "https://i.ytimg.com/vi/xtYWmPo_PCU/hqdefault.jpg",
+    "youtubeId": "xtYWmPo_PCU",
+    "credit": "editing, sequencing, coloring",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
+  },
+  {
+    "id": "videos-glaive-funeral-interview-youtube",
+    "title": "The Glaive & Funeral Interview",
+    "category": "VIDEOS",
+    "type": "youtube",
+    "src": "https://i.ytimg.com/vi/wGuT0bDbKPo/hqdefault.jpg",
+    "youtubeId": "wGuT0bDbKPo",
+    "credit": "editing, sequencing, coloring",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
+  },
+  {
+    "id": "videos-hyperpopdaily-summer-smash-2026-movie-youtube",
+    "title": "The Hyperpopdaily Summer Smash 2026 Movie",
+    "category": "VIDEOS",
+    "type": "youtube",
+    "src": "https://i.ytimg.com/vi/ES4xTEDfK8w/hqdefault.jpg",
+    "youtubeId": "ES4xTEDfK8w",
+    "credit": "graphics, editing, sequencing, coloring",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
+  },
+  {
+    "id": "videos-phreshboyswag-interview-youtube",
+    "title": "The Phreshboyswag Interview",
+    "category": "VIDEOS",
+    "type": "youtube",
+    "src": "https://i.ytimg.com/vi/hryobevWmJs/hqdefault.jpg",
+    "youtubeId": "hryobevWmJs",
+    "credit": "editing",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
+  },
+  {
+    "id": "videos-kevingotswag3-show-youtube",
+    "title": "The Kevingotswag3 Show: Margielaa & WildkardUno Interview",
+    "category": "VIDEOS",
+    "type": "youtube",
+    "src": "https://i.ytimg.com/vi/zEXLEtjgNQI/hqdefault.jpg",
+    "youtubeId": "zEXLEtjgNQI",
+    "credit": "editing, sequencing",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
   },
   {
     "id": "flyers-5star-rodney-flyer-jpg",
@@ -322,7 +386,7 @@ export const allAssets: PortfolioAsset[] = [
     "title": "NOHANDZ - Rexv2 (unused title card)",
     "category": "graphics",
     "type": "image",
-    "src": "/content/graphics/NOHANDZ%20-%20Rexv2%20%28unused%20title%20card%29.jpg",
+    "src": "/content/graphics/NOHANDZ%20-%20Rexv2%20(unused%20title%20card).jpg",
     "width": 2399,
     "height": 1686,
     "ratioClass": "wide"

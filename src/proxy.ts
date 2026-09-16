@@ -6,7 +6,9 @@ const PASSCODE_COOKIE = "xumm3r_gate";
 function isAllowedPath(pathname: string) {
   return (
     pathname === "/passcode" ||
+    pathname === "/passcode/" ||
     pathname === "/api/unlock" ||
+    pathname === "/api/unlock/" ||
     pathname.startsWith("/_next/") ||
     pathname === "/favicon.ico" ||
     pathname === "/robots.txt" ||
@@ -14,7 +16,7 @@ function isAllowedPath(pathname: string) {
   );
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (isAllowedPath(pathname)) {
