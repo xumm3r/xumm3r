@@ -96,9 +96,6 @@ export function PortfolioShell({ pageTitle, pageKicker, pageSubtitle, children }
           >
             Instagram
           </a>
-          <Link className={railLinkClass} href="/resume">
-            Resume
-          </Link>
         </div>
       </header>
 
@@ -144,7 +141,7 @@ export function PortfolioShell({ pageTitle, pageKicker, pageSubtitle, children }
 
       <main
         id="main-content"
-        className={`relative ml-[var(--desktop-content-start)] mr-[var(--desktop-gutter)] w-[calc(100vw-var(--desktop-content-start)-var(--desktop-gutter))] pb-[var(--space-xxl)] pt-[calc(var(--layout-top-bar)+var(--space-lg))] max-[1024px]:m-0 max-[1024px]:w-full max-[1024px]:pt-[var(--space-md)] ${
+        className={`relative ml-[var(--desktop-content-start)] mr-[var(--desktop-gutter)] w-[calc(100vw-var(--desktop-content-start)-var(--desktop-gutter))] pb-[var(--space-xxl)] pt-[calc(var(--layout-top-bar)+var(--space-lg))] max-[1024px]:m-0 max-[1024px]:w-full max-[1024px]:pt-[calc(var(--layout-top-bar)+env(safe-area-inset-top)+var(--space-sm))] ${
           isMobileMenuOpen ? "max-[700px]:pt-[calc(var(--layout-top-bar)+220px)]" : ""
         }`}
         tabIndex={-1}
@@ -181,9 +178,6 @@ export function PortfolioShell({ pageTitle, pageKicker, pageSubtitle, children }
             >
               Instagram
             </a>
-            <Link className={railLinkClass} href="/resume">
-              Resume
-            </Link>
           </div>
           <div className="mt-[var(--space-sm)] w-[140px]">
             {visualsAsset ? (

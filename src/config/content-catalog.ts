@@ -302,34 +302,34 @@ export const allAssets: PortfolioAsset[] = [
     "ratioClass": "tall"
   },
   {
-    "id": "graphics-dexelz-jpg",
-    "title": "DEXELZ SNIPPET OVERLAY",
+    "id": "graphics-needorkeep-in-a-year-thumbnail-jpg",
+    "title": "NEEDORKEEP IN A YEAR THUMBNAILS",
     "category": "graphics",
     "type": "image",
-    "src": "/content/graphics/dexelz.jpg",
-    "width": 1490,
-    "height": 836,
+    "src": "/content/graphics/needorkeep-in-a-year-thumbnail.jpg",
+    "width": 1280,
+    "height": 720,
     "ratioClass": "wide"
   },
   {
-    "id": "graphics-horror-jpg",
-    "title": "HORROR",
+    "id": "graphics-hyperpopdaily-2026-summer-smash-recap-thumbnail-jpg",
+    "title": "HYPERPOPDAILY 2026 SUMMER SMASH RECAP THUMBNAIL",
     "category": "graphics",
     "type": "image",
-    "src": "/content/graphics/HORROR.jpg",
-    "width": 864,
-    "height": 1080,
-    "ratioClass": "tall"
+    "src": "/content/graphics/hyperpopdaily-2026-summer-smash-recap-thumbnail.jpg",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
   },
   {
-    "id": "graphics-hyperpopdaily-flyer-jpg",
-    "title": "@hyperpopdaily flyer",
+    "id": "graphics-needorkeep-boxboys-atl-show-thumbnail-jpg",
+    "title": "NEEDORKEEP/BOXBOYS ATL SHOW THUMBNAIL",
     "category": "graphics",
     "type": "image",
-    "src": "/content/graphics/%40hyperpopdaily%20flyer.jpg",
-    "width": 1080,
-    "height": 1346,
-    "ratioClass": "tall"
+    "src": "/content/graphics/needorkeep-boxboys-atl-show-thumbnail.jpg",
+    "width": 1280,
+    "height": 720,
+    "ratioClass": "wide"
   },
   {
     "id": "graphics-needorkeep-cover-v1-jpg",
@@ -392,24 +392,34 @@ export const allAssets: PortfolioAsset[] = [
     "ratioClass": "tall"
   },
   {
-    "id": "graphics-needorkeep-in-a-year-thumbnail-jpg",
-    "title": "NEEDORKEEP IN A YEAR THUMBNAILS",
+    "id": "graphics-dexelz-jpg",
+    "title": "DEXELZ SNIPPET OVERLAY",
     "category": "graphics",
     "type": "image",
-    "src": "/content/graphics/needorkeep-in-a-year-thumbnail.jpg",
-    "width": 1280,
-    "height": 720,
+    "src": "/content/graphics/dexelz.jpg",
+    "width": 1490,
+    "height": 836,
     "ratioClass": "wide"
   },
   {
-    "id": "graphics-hyperpopdaily-2026-summer-smash-recap-thumbnail-jpg",
-    "title": "HYPERPOPDAILY 2026 SUMMER SMASH RECAP THUMBNAIL",
+    "id": "graphics-horror-jpg",
+    "title": "HORROR",
     "category": "graphics",
     "type": "image",
-    "src": "/content/graphics/hyperpopdaily-2026-summer-smash-recap-thumbnail.jpg",
-    "width": 1280,
-    "height": 720,
-    "ratioClass": "wide"
+    "src": "/content/graphics/HORROR.jpg",
+    "width": 864,
+    "height": 1080,
+    "ratioClass": "tall"
+  },
+  {
+    "id": "graphics-hyperpopdaily-flyer-jpg",
+    "title": "@hyperpopdaily flyer",
+    "category": "graphics",
+    "type": "image",
+    "src": "/content/graphics/%40hyperpopdaily%20flyer.jpg",
+    "width": 1080,
+    "height": 1346,
+    "ratioClass": "tall"
   },
   {
     "id": "personal-firstpost-jpg",
